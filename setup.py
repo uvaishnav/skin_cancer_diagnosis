@@ -8,7 +8,7 @@ __version__ = "0.0.0"
 
 REPO_NAME = "skin_cancer_diagnosis"
 AUTHOR_USER_NAME = "uvaishnav"
-SRC_REPO = "skin cancer diagnosis"
+SRC_REPO = "skinCancerDiagnosis"
 AUTHOR_EMAIL = "vuppalap@gitam.in"
 
 
