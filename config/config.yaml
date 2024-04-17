@@ -1,0 +1,8 @@
+artifacts_root: artifacts
+
+
+data_ingestion:
+  root_dir: artifacts/data_ingestion
+  dataset_name: bhanuprasanna/isic-2019
+  local_data_file: artifacts/data_ingestion
+  unzip_dir: artifacts/data_ingestion
