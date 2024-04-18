@@ -17,4 +17,5 @@ Flask
 Flask-Cors
 gdown
 kaggle
+tabulate
 -e .
