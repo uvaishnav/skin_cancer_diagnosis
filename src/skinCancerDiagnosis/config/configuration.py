@@ -1,6 +1,9 @@
 from skinCancerDiagnosis.constants import *
 from skinCancerDiagnosis.utils.common import read_yaml, create_directories
-from skinCancerDiagnosis.entity.config_entity import DataIngestionConfig
+from skinCancerDiagnosis.entity.config_entity import (
+    DataIngestionConfig,
+    DataPrepConfig
+)
 
 class ConfugarationManager:
     def __init__(
@@ -28,3 +31,17 @@ class ConfugarationManager:
         )
 
         return data_ingestion_config
+    
+    def get_data_prep_config(self)->DataPrepConfig:
+
+        config = self.config.data_prep
+
+        data_prep_config = DataPrepConfig(
+            data_path = config.data_path,
+            params_image_size= self.params.IMAGE_SIZE,
+            params_batch_size= self.params.BATCH_SIZE,
+            params_class_mode= self.params.CLASS_MODE,
+            params_augmentation= self.params.AUGMENTATION_TYPE
+        )
+
+        return data_prep_config

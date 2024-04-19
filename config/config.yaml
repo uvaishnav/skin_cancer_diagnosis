@@ -7,4 +7,5 @@ data_ingestion:
   local_data_file: artifacts/data_ingestion
   unzip_dir: artifacts/data_ingestion
 
-data_path : artifacts/data_ingestion/ISIC - 2019
+data_prep:
+  data_path : artifacts/data_ingestion/ISIC - 2019

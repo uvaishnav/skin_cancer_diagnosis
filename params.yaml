@@ -1,1 +1,10 @@
-key : val
+AUGMENTATION_TYPE : no
+# [no, rand_aug]
+IMAGE_SIZE : [224,224,3]
+BATCH_SIZE : 32
+INCLUDE_TOP : False
+EPOCHS : 100
+NUM_CLASSES : 8
+CLASS_MODE : categorical
+WEIGHTS : imagenet
+LEARNING_RATE : 0.01
