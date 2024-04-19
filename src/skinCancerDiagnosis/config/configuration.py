@@ -2,7 +2,8 @@ from skinCancerDiagnosis.constants import *
 from skinCancerDiagnosis.utils.common import read_yaml, create_directories
 from skinCancerDiagnosis.entity.config_entity import (
     DataIngestionConfig,
-    DataPrepConfig
+    DataPrepConfig,
+    TrailTrainingConfig
 )
 
 class ConfugarationManager:
@@ -45,3 +46,19 @@ class ConfugarationManager:
         )
 
         return data_prep_config
+    
+    def get_trail_training_config(self)->TrailTrainingConfig:
+
+        config = self.config.trail_training
+        create_directories([config.root_dir])
+
+        trail_training_config = TrailTrainingConfig(
+            root_dir = Path(config.root_dir),
+            params_patience = self.params.PATIENCE,
+            params_weight = self.params.WEIGHTS,
+            params_include_top = self.params.INCLUDE_TOP,
+            params_learning_rate = self.params.LEARNING_RATE,
+            params_epochs = self.params.EPOCHS
+        )
+
+        return trail_training_config

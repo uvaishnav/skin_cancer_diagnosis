@@ -9,3 +9,7 @@ data_ingestion:
 
 data_prep:
   data_path : artifacts/data_ingestion/ISIC - 2019
+
+
+trail_training:
+  root_dir: artifacts/trail_training
