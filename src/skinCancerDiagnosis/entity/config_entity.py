@@ -18,9 +18,9 @@ class DataPrepConfig:
 
 @dataclass(frozen=True)
 class TrailTrainingConfig:
-    root_dir = Path
-    param_epochs = int
-    param_include_top = bool
-    param_weights = str
-    param_learning_rate = float
-    param_patience = int
+    root_dir : Path
+    params_epochs : int
+    params_include_top : bool
+    params_weights : str
+    params_learning_rate : float
+    params_patience : int

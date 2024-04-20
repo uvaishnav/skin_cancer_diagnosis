@@ -25,10 +25,10 @@ class DataGenerator:
         return generator
     
     def get_train_generator(self):
-        if self.config.params_augmentation=="no":
+        if self.config.params_augmentation=="not":
             train_generator = self.make_generator(datagen=self.datagen,file_path=self.train_dir,shuffle=True)
         else:
-            pass
+            train_generator = None
 
         return train_generator
     

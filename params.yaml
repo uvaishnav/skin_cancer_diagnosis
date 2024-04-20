@@ -1,4 +1,4 @@
-AUGMENTATION_TYPE : no
+AUGMENTATION_TYPE : not
 # [no, rand_aug]
 IMAGE_SIZE : [224,224,3]
 BATCH_SIZE : 32
