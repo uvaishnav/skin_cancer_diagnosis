@@ -27,6 +27,18 @@ class DataGenerator:
     def get_train_generator(self):
         if self.config.params_augmentation=="not":
             train_generator = self.make_generator(datagen=self.datagen,file_path=self.train_dir,shuffle=True)
+        elif self.config.params_augmentation=="rand_aug":
+            train_datagen = ImageDataGenerator(
+                rescale = 1/255.0,
+                rotation_range=20,
+                width_shift_range=0.2,
+                height_shift_range=0.2,
+                shear_range=0.2,
+                zoom_range=0.2,
+                horizontal_flip=True,
+                fill_mode='nearest'
+            )
+            train_generator = self.make_generator(datagen=train_datagen,file_path=self.train_dir,shuffle=True)
         else:
             train_generator = None
 
