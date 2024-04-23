@@ -24,3 +24,9 @@ class TrailTrainingConfig:
     params_weights : str
     params_learning_rate : float
     params_patience : int
+
+@dataclass(frozen=True)
+class ModelevalConfig:
+    model_path: Path
+    all_params : dict
+    mlflow_uri : str

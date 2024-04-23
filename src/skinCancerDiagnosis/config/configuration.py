@@ -1,9 +1,11 @@
+import os
 from skinCancerDiagnosis.constants import *
 from skinCancerDiagnosis.utils.common import read_yaml, create_directories
 from skinCancerDiagnosis.entity.config_entity import (
     DataIngestionConfig,
     DataPrepConfig,
-    TrailTrainingConfig
+    TrailTrainingConfig,
+    ModelevalConfig
 )
 
 class ConfugarationManager:
@@ -62,3 +64,17 @@ class ConfugarationManager:
         )
 
         return trail_training_config
+    
+    def get_evaluation_config(self,model_path)->ModelevalConfig:
+
+        config = self.config.trail_training
+
+        path = os.path.join(config.root_dir,model_path)
+
+        model_evaluation_config = ModelevalConfig(
+            model_path= path,
+            all_params= self.params,
+            mlflow_uri= 'https://dagshub.com/uvaishnav/skin_cancer_diagnosis.mlflow'
+        )
+
+        return model_evaluation_config
