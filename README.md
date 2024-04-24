@@ -10,6 +10,8 @@ This section contains detailed information about the approach, experimentation r
 
 For a more detailed view of the documentation, please visit the [Full Documentation](https://hashnode.com/preview/6620b84699ffe810fe217f1d)
 
+## MLflow experiment Logs
+All the experiment results and models are logged in MLflow for a clearer understanding and detailed inference : [View here](https://dagshub.com/uvaishnav/skin_cancer_diagnosis.mlflow/#/experiments/0?viewStateShareKey=d45d492cc47b731d9ca226e7cb8ac99009b74bc25bdaeb8979ba9a66e9ced4f6)
 
 ## Run Locally
 
