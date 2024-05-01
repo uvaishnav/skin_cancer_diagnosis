@@ -2,6 +2,7 @@ import os
 import tensorflow as tf
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
 from skinCancerDiagnosis.entity.config_entity import DataPrepConfig
+from skinCancerDiagnosis.components.data_prep_album import DataAlbumPrep
 
 class DataGenerator:
     def __init__(self, config:DataPrepConfig):
@@ -39,6 +40,11 @@ class DataGenerator:
                 fill_mode='nearest'
             )
             train_generator = self.make_generator(datagen=train_datagen,file_path=self.train_dir,shuffle=True)
+        elif self.config.params_augmentation=="albumentations":
+            data_generator = DataAlbumPrep(train_path=self.train_dir,test_path=self.val_dir,num_classes=self.config.params_numclasses)
+            img = self.config.params_image_size
+            img_size = tuple(img[0],img[1])
+            train_generator = data_generator.get_train_data(img_size=img_size)
         else:
             train_generator = None
 

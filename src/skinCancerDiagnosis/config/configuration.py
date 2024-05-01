@@ -44,6 +44,7 @@ class ConfugarationManager:
             params_image_size= self.params.IMAGE_SIZE,
             params_batch_size= self.params.BATCH_SIZE,
             params_class_mode= self.params.CLASS_MODE,
+            params_numclasses= self.params.NUM_CLASSES,
             params_augmentation= self.params.AUGMENTATION_TYPE
         )
 

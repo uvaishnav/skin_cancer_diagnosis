@@ -14,6 +14,7 @@ class DataPrepConfig:
     params_image_size : list
     params_batch_size : int
     params_class_mode : str
+    params_numclasses : int
     params_augmentation :str
 
 @dataclass(frozen=True)

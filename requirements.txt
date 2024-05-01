@@ -1,4 +1,5 @@
-tensorflow
+# tensorflow
+scikit-learn
 pandas 
 dvc
 mlflow==2.11.2
@@ -18,4 +19,6 @@ Flask-Cors
 gdown
 kaggle
 tabulate
+albumentations
+opencv-python
 -e .

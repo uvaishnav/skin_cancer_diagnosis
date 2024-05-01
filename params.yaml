@@ -1,5 +1,5 @@
-AUGMENTATION_TYPE : rand_aug
-# [not, rand_aug]
+AUGMENTATION_TYPE : albumentations
+# [not, rand_aug, albumentations]
 IMAGE_SIZE : [224,224,3]
 BATCH_SIZE : 32
 INCLUDE_TOP : False
